@@ -1,16 +1,19 @@
 """Examples:
     1) Solve Simplex.
-    objective_function = [0, 2, 1]
-    constraints = [[4, 1, 1], [2, 1, -1]]
-    equality = ["ineq", "ineq"]
-    parameters = [("x1", "+"), ("x2", "+")]
-    mode = "max"
+    objective_function = [0, 6, 5, 4]
+    constraints = [[240, 2, 1, 1], [360, 1, 3, 2], [300, 2, 1, 2]]
+    equality = ["ineq", "ineq", "ineq"]
+    parameters = [("x1", "+"), ("x2", "+"), ("x3", "+")]
 
+    problem = Problem_Prepration(objective_function=objective_function,
+                                constraints=constraints,
+                                equality=equality,
+                                parameters=parameters,
+                                mode="max")
 
-
-    simplex = Simplex(problem=problem, number_of_dashes=15)
+    simplex = Simplex(problem=problem)
     simplex.fit()
-
+    print()
     simplex.make_table(format_="github") # This line will show all the steps.
 
     2) Solve Dual Simplex:
