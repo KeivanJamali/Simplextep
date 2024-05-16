@@ -1,8 +1,7 @@
 LICENSE
-MANIFEST.in
-README.md
-Simplextep.py
 setup.py
+Simplextep/Simplextep.py
+Simplextep/__init__.py
 Simplextep.egg-info/PKG-INFO
 Simplextep.egg-info/SOURCES.txt
 Simplextep.egg-info/dependency_links.txt

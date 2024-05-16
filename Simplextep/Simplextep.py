@@ -6,12 +6,7 @@
     parameters = [("x1", "+"), ("x2", "+")]
     mode = "max"
 
-    problem = Problem_Prepration(
-                                objective_function=objective_function,
-                                constraints=constraints,
-                                equality=equality,
-                                parameters=parameters,
-                                mode=mode)
+
 
     simplex = Simplex(problem=problem, number_of_dashes=15)
     simplex.fit()
