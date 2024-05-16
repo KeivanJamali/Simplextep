@@ -1,5 +1,7 @@
 LICENSE
+MANIFEST.in
 README.md
+Simplextep.py
 setup.py
 Simplextep.egg-info/PKG-INFO
 Simplextep.egg-info/SOURCES.txt
