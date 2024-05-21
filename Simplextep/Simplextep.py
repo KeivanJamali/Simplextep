@@ -257,9 +257,9 @@ class Problem_Prepration:
         data_z = pd.DataFrame([self.objective_function], columns=columns)
         data_z["Basic Variables"] = f"-z"
 
-        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * "-"}" for _ in range(len(columns))])],
+        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * '-'}" for _ in range(len(columns))])],
                                 columns=columns)
-        data_empty["Basic Variables"] = f"{self.number_of_dash * "-"}"
+        data_empty["Basic Variables"] = f"{self.number_of_dash * '-'}"
 
         data = pd.concat((data, data_z, data_empty), ignore_index=True)
         self.data = data
@@ -274,9 +274,9 @@ class Problem_Prepration:
         data_z = pd.DataFrame([self.objective_function], columns=columns)
         data_z["Basic Variables"] = f"-z"
 
-        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * "-"}" for _ in range(len(columns))])],
+        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * '-'}" for _ in range(len(columns))])],
                                 columns=columns)
-        data_empty["Basic Variables"] = f"{self.number_of_dash * "-"}"
+        data_empty["Basic Variables"] = f"{self.number_of_dash * '-'}"
 
         data = pd.concat((data, data_z, data_empty), ignore_index=True)
         self.data = data
@@ -522,7 +522,7 @@ class Simplex:
             print(f"[ERROR] Limit of iteration exceeded.(iteration={self.max_iterations})")
             print(f"[DONE] INFEASIBLE!!!")
             return 2
-        elif self.minus_w[0] < 1e-10 and self.minus_w[1:].max(axis=0) < 1e-20:
+        elif abs(self.minus_w[0]) < 1e-10 and self.minus_w[1:].max(axis=0) < 1e-10:
             for l_ in self.label:
                 if l_[0] == "y":
                     return False
@@ -546,9 +546,9 @@ class Simplex:
             data_w = pd.DataFrame([self.minus_w], columns=self.columns)
             data_w["Basic Variables"] = f"-w{self.iteration}"
 
-        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * "-"}" for _ in range(len(self.columns))])],
+        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * '-'}" for _ in range(len(self.columns))])],
                                   columns=self.columns)
-        data_empty["Basic Variables"] = f"{self.number_of_dash * "-"}"
+        data_empty["Basic Variables"] = f"{self.number_of_dash * '-'}"
 
         self.iteration += 1
 
@@ -915,9 +915,9 @@ class Dual():
         data_z = pd.DataFrame([self.new_objective_function], columns=columns)
         data_z["Basic Variables"] = f"-z"
 
-        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * "-"}" for _ in range(len(columns))])],
+        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * '-'}" for _ in range(len(columns))])],
                                 columns=columns)
-        data_empty["Basic Variables"] = f"{self.number_of_dash * "-"}"
+        data_empty["Basic Variables"] = f"{self.number_of_dash * '-'}"
 
         data = pd.concat((data, data_z, data_empty), ignore_index=True)
         self.data = data
@@ -932,9 +932,9 @@ class Dual():
         data_z = pd.DataFrame([self.new_objective_function], columns=columns)
         data_z["Basic Variables"] = f"-z"
 
-        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * "-"}" for _ in range(len(columns))])],
+        data_empty = pd.DataFrame([np.array([f"{self.number_of_dash * '-'}" for _ in range(len(columns))])],
                                 columns=columns)
-        data_empty["Basic Variables"] = f"{self.number_of_dash * "-"}"
+        data_empty["Basic Variables"] = f"{self.number_of_dash * '-'}"
 
         data = pd.concat((data, data_z, data_empty), ignore_index=True)
         self.data = data
