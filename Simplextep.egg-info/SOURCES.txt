@@ -1,9 +1,0 @@
-LICENSE
-setup.py
-Simplextep/Simplextep.py
-Simplextep/__init__.py
-Simplextep.egg-info/PKG-INFO
-Simplextep.egg-info/SOURCES.txt
-Simplextep.egg-info/dependency_links.txt
-Simplextep.egg-info/requires.txt
-Simplextep.egg-info/top_level.txt
